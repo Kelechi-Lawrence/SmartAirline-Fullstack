@@ -1,0 +1,120 @@
+
+/* Admin Flight Details Styles */
+.admin-flight-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-flight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.admin-flight-title {
+    margin-top: 0;
+    color: #1a237e;
+}
+
+.admin-flight-summary {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-flight-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.admin-route-info {
+    margin-bottom: 1.5rem;
+}
+
+.admin-times {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.admin-flight-details {
+    margin-top: 1.5rem;
+}
+
+.admin-flight-management {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-edit-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1a237e;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.admin-flight-bookings {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-booking-item {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.admin-view-booking {
+    color: #1a237e;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.admin-view-booking:hover {
+    text-decoration: underline;
+}
+
+.admin-no-bookings {
+    text-align: center;
+    padding: 1rem;
+    color: #6c757d;
+}
+
+.admin-flight-actions {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .admin-flight-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .admin-times {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+

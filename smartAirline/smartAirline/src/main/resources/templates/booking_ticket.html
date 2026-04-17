@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Airline – Booking Ticket</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .email-container {
+            max-width: 650px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            background-color: #0b5ed7;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 24px;
+            color: #333333;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #0b5ed7;
+            font-weight: bold;
+        }
+
+        .ticket-box {
+            border: 1px dashed #0b5ed7;
+            border-radius: 6px;
+            padding: 16px;
+            background-color: #f8fbff;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .row span {
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #198754;
+        }
+            .b-botton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: green;
+            color: white;
+            border-radius: 5px;
+            width: 150px;
+            margin: 10px auto;
+            height: 30px;
+            }
+        .footer {
+            background-color: #f1f3f5;
+            text-align: center;
+            padding: 16px;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+
+<body>
+<div class="email-container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>✈ Smart Airline</h1>
+        <p>Flight Booking Confirmation</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <p>
+            Hi <strong th:text="${userName}">Passenger</strong>,
+        </p>
+
+        <p>
+            Your booking has been <strong>successfully confirmed</strong>.
+            Below are your flight and ticket details:
+        </p>
+
+        <!-- Booking Info -->
+        <div class="section-title">Booking Information</div>
+        <div class="ticket-box">
+            <div class="row">
+                <div>Booking Reference</div>
+                <span th:text="${bookingReference}">ABC123</span>
+            </div>
+
+            <div class="row">
+                <div>Flight Number</div>
+                <span th:text="${flightNumber}">SA-101</span>
+            </div>
+        </div>
+
+        <!-- Departure -->
+        <div class="section-title">Departure</div>
+        <div class="ticket-box">
+            <div class="row">
+                <div>Airport</div>
+                <span th:text="${departureAirportName}">Murtala Muhammed Intl</span>
+            </div>
+
+            <div class="row">
+                <div>City</div>
+                <span th:text="${departureAirportCity}">Lagos</span>
+            </div>
+
+            <div class="row">
+                <div>IATA Code</div>
+                <span th:text="${departureAirportIataCode}">LOS</span>
+            </div>
+
+            <div class="row">
+                <div>Departure Time</div>
+                <span th:text="${departureTime}">10 Jan 2026, 09:00</span>
+            </div>
+        </div>
+
+        <!-- Arrival -->
+        <div class="section-title">Arrival</div>
+        <div class="ticket-box">
+            <div class="row">
+                <div>Airport</div>
+                <span th:text="${arrivalAirportName}">Nnamdi Azikiwe Intl</span>
+            </div>
+
+            <div class="row">
+                <div>City</div>
+                <span th:text="${arrivalAirportCity}">Abuja</span>
+            </div>
+
+            <div class="row">
+                <div>IATA Code</div>
+                <span th:text="${arrivalAirportIataCode}">ABJ</span>
+            </div>
+
+            <div class="row">
+                <div>Arrival Time</div>
+                <span th:text="${arrivalTime}">10 Jan 2026, 10:15</span>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="section-title">Payment</div>
+        <div class="ticket-box">
+            <div class="row">
+                <div>Base Price</div>
+                <span class="price" th:text="${basePrice}">₦120,000</span>
+            </div>
+
+            <div class="row">
+                <div>Passengers</div>
+                <span th:text="${passengers.size()}">1</span>
+            </div>
+        </div>
+        <div th:href="${bookingUrl}"class = 'b-botton'> View my booking</div>
+        <p>
+            Please arrive at the airport at least <strong>2 hours before departure</strong>.
+        </p>
+
+        <p>
+            Thank you for choosing <strong>Smart Airline</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 Smart Airline · Safe skies, smart journeys ✈
+    </div>
+
+</div>
+</body>
+</html>

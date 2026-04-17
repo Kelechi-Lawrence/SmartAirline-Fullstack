@@ -1,0 +1,117 @@
+/* PROFILE PAGE ENHANCEMENTS */
+.profile-page {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    border-top: 6px solid #1a237e;
+}
+
+.profile-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid #f1f3f5;
+    margin-bottom: 2.5rem;
+}
+
+.profile-tabs button {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #adb5bd;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.profile-tabs button.active {
+    color: #1a237e;
+    border-bottom: 3px solid #1a237e;
+}
+
+.profile-tabs button:hover:not(.active) {
+    color: #303f9f;
+    background-color: #f8f9fa;
+}
+
+/* Booking Card "Boarding Pass" Look */
+.booking-card {
+    border: 1.5px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+}
+
+.booking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 1.25rem;
+    border-bottom: 1px dashed #ced4da; /* Ticket tear-line feel */
+}
+/* RESPONSIVE PROFILE */
+@media (max-width: 992px) {
+    .profile-info {
+        grid-template-columns: 1fr; /* Stack Name/Email and Address cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1.5rem; /* Less padding on small screens */
+    }
+    
+    .profile-tabs {
+        overflow-x: auto; /* Allow tabs to slide if there are too many */
+        white-space: nowrap;
+    }
+
+    .booking-details {
+        grid-template-columns: 1fr; /* Stack flight, passengers, and actions */
+        text-align: center;
+    }
+
+    .booking-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .booking-form {
+        grid-template-columns: 1fr; 
+    }
+
+    .summary-section {
+        position: static; /* Stop it from sticking to the side */
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .passenger-form {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-summary .route {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .flight-summary .route span:nth-child(2) {
+        transform: rotate(90deg); 
+    }
+}

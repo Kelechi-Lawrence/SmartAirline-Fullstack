@@ -1,0 +1,130 @@
+
+.update-profile-container {
+    padding: 3rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.update-profile-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    border-top: 5px solid #1a237e; /* Airline Brand Color */
+}
+
+.update-profile-title {
+    margin-top: 0;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.update-profile-subtitle {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.update-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.update-profile-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.update-profile-label {
+    font-weight: 600;
+    color: #343a40;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.update-profile-input {
+    padding: 0.85rem;
+    border: 1.5px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fdfdfd;
+}
+
+.update-profile-input:focus {
+    outline: none;
+    border-color: #1a237e;
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+    background-color: #fff;
+}
+
+/* Specific style for read-only email */
+.update-profile-input.readonly {
+    background-color: #f1f3f5;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+.update-profile-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.update-profile-submit {
+    background: linear-gradient(135deg, #1a237e 0%, #303f9f 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 2;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.update-profile-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+}
+
+.update-profile-cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #495057;
+    border: 1.5px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.update-profile-cancel:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.password-section-divider {
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 576px) {
+    .update-profile-actions {
+        flex-direction: column;
+    }
+}

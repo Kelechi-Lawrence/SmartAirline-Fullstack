@@ -1,0 +1,121 @@
+/* NAVBAR STYLES - EMIRATES EDITION */
+
+.nb {
+    /* Rich black background */
+    background-color: #333; 
+    color: #FFFFFF;
+    padding: 1.2rem 2rem;
+    /* subtle gold bottom border instead of a heavy shadow */
+    border-bottom: 2px solid #D4AF37; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nb-logo {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 800; /* Bold, premium feel */
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-airline {
+    /* Emirates Signature Red */
+    color: #daae1b; 
+    margin-right: 0.3rem;
+}
+
+.logo-text {
+    color: #FFFFFF;
+    font-family: 'serif', 'Times New Roman'; /* Hint of classic luxury */
+}
+
+.nb-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-transform: uppercase; /* Classic airline style */
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    /* Gold hover color */
+    color: #D4AF37; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px; /* Thinner line for elegance */
+    background-color: #D4AF37;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    background: none;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px; /* Sharper edges look more professional than round */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #D4AF37;
+    color: #333;
+}
+
+.nav-button-primary {
+    /* Gold button with red accents on hover */
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #333;
+}
+
+.nav-button-primary:hover {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #333;
+}
+
+/* NAVBAR RESPONSIVE */
+@media (max-width: 768px) {
+    .nb {
+        padding: 1rem;
+    }
+    .nb-container {
+        flex-direction: column;
+    }
+    /* ... existing responsive logic ... */
+}

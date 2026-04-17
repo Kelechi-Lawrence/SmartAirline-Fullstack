@@ -1,0 +1,136 @@
+/*ADMIN REGISTER*/
+.admin-register-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.admin-register-card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.admin-register-header {
+    background: #1a237e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.admin-register-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.admin-register-description {
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.admin-register-content {
+    padding: 2rem;
+}
+
+.admin-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.admin-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.admin-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.admin-input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.admin-roles-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-role-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.admin-role-checkbox:hover {
+    background: #f1f1f1;
+}
+
+.admin-role-checkbox.selected {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.admin-role-input {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.admin-register-button {
+    width: 100%;
+    padding: 1rem;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.admin-register-button:hover {
+    background: #1a252f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .admin-register-page {
+        padding: 1rem;
+    }
+
+    .admin-register-header {
+        padding: 1.5rem;
+    }
+
+    .admin-register-content {
+        padding: 1.5rem;
+    }
+
+    .admin-roles-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
